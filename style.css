@@ -114,12 +114,13 @@ select{
 
   button {
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 11px 22px;
+    margin-top: 5px;
   }
 
   select {
     height: 40px;
-    padding: 0 15px;
+    padding: 14px 15px;
     background-size: 14px;
     background-position-x: calc(100% - 15px);
     background-position-y: 8px;

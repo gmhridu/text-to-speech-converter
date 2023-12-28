@@ -1,6 +1,6 @@
 let speech = new SpeechSynthesisUtterance();
 let voices = [];
-let isPaused = false;
+let isPaused = false; 
 
 let voiceSelect = document.querySelector("select");
 
@@ -24,7 +24,8 @@ document.querySelector("button").addEventListener("click", () => {
   }
 });
 
-document.querySelector("button").addEventListener("click", () => {
+
+document.querySelector("button").addEventListener("dblclick", () => {
   if (!isPaused) {
     window.speechSynthesis.pause();
     isPaused = true;
@@ -34,8 +35,10 @@ document.querySelector("button").addEventListener("click", () => {
   }
 });
 
+
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
+
+  if (event.key === "13") {
     if (!isPaused) {
       speech.text = document.querySelector("textarea").value;
       window.speechSynthesis.speak(speech);
